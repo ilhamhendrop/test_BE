@@ -9,7 +9,6 @@ use App\Http\Resources\PermissionVerifikatorResource;
 use App\Models\Permission;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Redis;
 
 class PermissionController extends Controller
 {

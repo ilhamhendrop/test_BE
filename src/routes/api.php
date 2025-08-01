@@ -22,6 +22,10 @@ Route::middleware(['auth:sanctum', 'role:'.RoleEnum::ADMIN->value])->group(funct
         Route::patch('/admin/user/{id}/edit/password', 'updatePassword');
         Route::patch('/admin/user/{id}/edit/role', 'updateRole');
     });
+
+    Route::controller(PermissionController::class)->group(function () {
+       Route::get('/admin/pengajuan', 'allVerifikator');
+    });
 });
 
 Route::middleware(['auth:sanctum', 'role:'.RoleEnum::VERIFIKATOR->value])->group(function () {
